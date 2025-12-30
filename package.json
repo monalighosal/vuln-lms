@@ -1,0 +1,30 @@
+{
+  "name": "vulnerable-lms",
+  "version": "1.0.0",
+  "description": "Learning Management System with intentional vulnerabilities for security training",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:secure": "SECURE_MODE=true node server.js",
+    "start:vulnerable": "SECURE_MODE=false node server.js",
+    "switch:secure": "node switch-mode.js secure",
+    "switch:vulnerable": "node switch-mode.js vulnerable"
+  },
+  "keywords": ["lms", "security", "training", "vulnerabilities"],
+  "author": "Security Training",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "sqlite3": "^5.1.6",
+    "cookie-parser": "^1.4.6",
+    "multer": "^1.4.5-lts.1",
+    "express-session": "^1.17.3",
+    "cors": "^2.8.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
